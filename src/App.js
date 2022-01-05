@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Tarjeta from "./views/Tarjeta";
+import 'font-awesome/css/font-awesome.min.css'
+import './styles/profile.css';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <title>Promocion 1998 - Santa Rosa de Chosica</title>
+        <meta
+          name="description"
+          content="promocion 1998 Santa Rosa de Chosica"
+        />
+        <link rel="icon" href="/favicon.ico" />
       </header>
-    </div>
+      <Tarjeta />
+    </>
   );
 }
 
