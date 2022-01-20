@@ -15,7 +15,7 @@ const Tarjeta = () => {
             <div className="profile-card-1" key={index}>
               {/* <!--image--> */}
               <div className="img">
-                <img src={exalumno.foto ? exalumno.foto : "default.jpg" } />
+                <img src={exalumno.foto ? exalumno.foto : "default.jpg" } alt={exalumno.nombre}/>
               </div>
               {/* <a className="view-more" href="">
                 <i className="fa fa-plus-circle"></i>
@@ -43,25 +43,24 @@ const Tarjeta = () => {
               </div>
               {/* <!--social icons--> */}
               <div className="links">
-                <a className="fb" href="">
-                  <i className="fa fa-facebook" aria-hidden="true"></i>
+                <a className={exalumno.classparentlogo1} href={exalumno.linklogo1} target="_blank" rel="noopener noreferrer">
+                  <i className={exalumno.classlogo1} aria-hidden="true"></i>
                 </a>
-                <a className="twitter" href="">
-                  <i className="fa fa-twitter" aria-hidden="true"></i>
+                <a className={exalumno.classparentlogo2} href={exalumno.linklogo2} target="_blank" rel="noopener noreferrer">
+                  <i className={exalumno.classlogo2} aria-hidden="true"></i>
                 </a>
-                <a className="linkedin" href="" >
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-                 
+                <a className={exalumno.classparentlogo3} href={exalumno.linklogo3} target="_blank" rel="noopener noreferrer">
+                <i className={exalumno.classlogo3} aria-hidden="true"></i>
                 </a>
-                <a className="envelope" href="" placeholder="xx">
-                  <i className="fa fa-briefcase" aria-hidden="true" ></i>
+                <a className={exalumno.classparentlogo4} href={exalumno.linklogo4} target="_blank" rel="noopener noreferrer">
+                  <i className={exalumno.classlogo4} aria-hidden="true" ></i>
                 </a>
               </div>
             </div>
           );
         })}
       </div>
-      {/* <footer className="footer">
+       {/*<footer className="footer">
         <p className="footer__title">Hecho por Giovanni Ascarza</p>
         <div className="footer__social">
             <a href="#" className="footer__icon"><i className='fa fa-facebook'></i></a>

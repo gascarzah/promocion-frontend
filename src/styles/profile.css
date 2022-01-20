@@ -125,14 +125,14 @@ body {
   color: white;
 }
 
-.profile-card-1 .links .fb {
+.profile-card-1 .links .facebook {
   position: absolute;
   left: 0;
   width: 25%;
   height: 100%;
   background-color: #3b5998;
 }
-.profile-card-1 .links .fb:hover {
+.profile-card-1 .links .facebook:hover {
   background-color: #2162db;
 }
 
@@ -145,6 +145,16 @@ body {
 }
 .profile-card-1 .links .twitter:hover {
   background-color: #50dcff;
+}
+.profile-card-1 .links .instagram {
+  position: absolute;
+  left: 25%;
+  width: 25%;
+  height: 100%;
+  background-color: #F2D096;
+}
+.profile-card-1 .links .instagram:hover {
+  background-color: #F6E2D7;
 }
 .profile-card-1 .links .follow {
   position: absolute;
@@ -168,14 +178,14 @@ body {
   background-color: #089beb;
 }
 
-.profile-card-1 .links .envelope {
+.profile-card-1 .links .briefcase {
   position: absolute;
   left: 75%;
   width: 25%;
   height: 100%;
   background-color: rgb(224, 39, 39);
 }
-.profile-card-1 .links .envelope:hover {
+.profile-card-1 .links .briefcase:hover {
   background-color: red;
 }
 /* image after effect */
