@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Exalumnos from "../../data";
-
+import {
+  Button,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  
+} from "@mui/material";
 
 const Tarjeta = () => {
+  const [scroll, setScroll] = useState('paper');
+  const [modalInsertar, setModalInsertar]= useState(false);
   const exalumnos = Exalumnos;
+
+  const handleOpen  = (row) => {
+     setModalInsertar(true)
+   }
+
+  const cerrarModalInsertar = () => {
+    setModalInsertar(false)
+  }
+
 
   return (
     <>
@@ -17,9 +34,15 @@ const Tarjeta = () => {
               <div className="img">
                 <img src={exalumno.foto ? exalumno.foto : "default.jpg" } alt={exalumno.nombre}/>
               </div>
-              {/* <a className="view-more" href="">
+              {/* <a className="view-more" href="#"  onClick={() => handleOpen(exalumno)}>
                 <i className="fa fa-plus-circle"></i>
               </a> */}
+
+              {/* <Button size='small' color="primary" 
+                  onClick={() => handleOpen(exalumno)}>
+                     <i className="fa fa-plus-circle"></i>
+                    </Button> */}
+
               {/* <!--text--> */}
               <div className="mid-section">
                 <div className="name">{exalumno.nombre}</div>
@@ -60,15 +83,31 @@ const Tarjeta = () => {
           );
         })}
       </div>
-       {/*<footer className="footer">
-        <p className="footer__title">Hecho por Giovanni Ascarza</p>
-        <div className="footer__social">
+       <footer className="footer">
+        <p className="footer__title">Hecho por <a href="https://gascarzah.com" target={"_blank"}> Giovanni Ascarza</a> 2022</p>
+        {/* <div className="footer__social">
             <a href="#" className="footer__icon"><i className='fa fa-facebook'></i></a>
             <a href="#" className="footer__icon"><i className='bx bxl-instagram'></i></a>
             <a href="#" className="footer__icon"><i className='bx bxl-twitter'></i></a>
-        </div>
-        <p>&#169; 2021 todos los izquierdos reservados</p>
-    </footer> */}
+        </div> */}
+        {/* <p>&#169; 2022 todos los izquierdos reservados</p> */}
+    </footer>
+
+<Dialog  open={modalInsertar}
+        onClose={cerrarModalInsertar}
+        scroll={scroll}>
+        <DialogTitle>Insertar</DialogTitle>
+        <DialogContent dividers={scroll === 'paper'}>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consectetur tempore reiciendis recusandae, accusamus esse quam sed, dolores non in eius laborum repellat? Necessitatibus eaque corrupti assumenda iusto, odio earum.</p>
+         </DialogContent>
+        {/* <DialogActions>
+          <Button onClick={cerrarModalInsertar}>Cancel</Button>
+          <Button onClick={cerrarModalInsertar}>Subscribe</Button>
+        </DialogActions> */}
+      </Dialog>
+
+
+
     </>
   );
 };
